@@ -1,0 +1,40 @@
+@HotelListing.Api_HostAddress = https://localhost:7219
+
+GET {{HotelListing.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+GET {{HotelListing.Api_HostAddress}}/api/hotel
+
+###
+
+
+POST {{HotelListing.Api_HostAddress}}/api/hotel
+Content-Type: application/json
+
+{
+    "id": 3,
+    "name": "Test Eko Hotel",
+    "address": "Victoria Island, Lagos, Nigeria",
+    "rating": 4.7
+}
+
+###
+
+GET {{HotelListing.Api_HostAddress}}/api/hotel/3
+
+###
+
+DELETE {{HotelListing.Api_HostAddress}}/api/hotel/0
+
+###
+
+PUT {{HotelListing.Api_HostAddress}}/api/hotel/0
+Content-Type: application/json
+
+{
+  //Hotel
+}
+
+###
