@@ -1,5 +1,8 @@
 
+using HotelListing.Api.Configurations;
+using HotelListing.Api.Contracts;
 using HotelListing.Api.Data;
+using HotelListing.Api.Repository;
 using Microsoft.EntityFrameworkCore;
 
 namespace HotelListing.Api
@@ -14,10 +17,13 @@ namespace HotelListing.Api
             var connectionString = builder.Configuration.GetConnectionString("HotelListingDbConnectionString");
             builder.Services.AddDbContext<HotelListingDbContext>(options => options.UseSqlServer(connectionString));
 
+            builder.Services.AddScoped<ICountriesRepository, CountriesRepository>();
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+
+            builder.Services.AddAutoMapper(typeof(MapperConfig));
 
             var app = builder.Build();
 
