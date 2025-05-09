@@ -1,4 +1,5 @@
 ﻿using HotelListing.Api.Contracts;
+
 using HotelListing.Api.Data;
 using Microsoft.EntityFrameworkCore;
 
@@ -12,6 +13,24 @@ namespace HotelListing.Api.Repository
             _context = context;
 
         }
+        public async Task<List<T>> GetAllAsync()
+        {
+            return await _context.Set<T>().ToListAsync();
+        }
+
+        public async Task<T> GetByIdAsync(int? id)
+        {
+            if (id == null)
+                return null;
+            return await _context.Set<T>().FindAsync(id);
+        }
+
+        public async Task UpdateAsync(T entity)
+        {
+            _context.Update(entity);
+            await _context.SaveChangesAsync();
+        }
+
         public async Task<T> CreateAsync(T entity)
         {
             await _context.Set<T>().AddAsync(entity);
@@ -31,24 +50,6 @@ namespace HotelListing.Api.Repository
         {
             var entity = await GetByIdAsync(id);
             return entity != null;
-        }
-
-        public async Task<List<T>> GetAllAsync()
-        {
-            return await _context.Set<T>().ToListAsync();
-        }
-
-        public async Task<T> GetByIdAsync(int? id)
-        {
-            if (id == null)
-                return null;
-            return await _context.Set<T>().FindAsync(id);
-        }
-
-        public async Task UpdateAsync(T entity)
-        {
-            _context.Update(entity);
-            await _context.SaveChangesAsync();
         }
     }
 }
