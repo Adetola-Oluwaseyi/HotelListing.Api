@@ -4,6 +4,6 @@ namespace HotelListing.Api.Contracts
 {
     public interface IHotelsRepository : IGenericRepository<Hotel>
     {
-        Task<Hotel> GetHotelById(int id);
+        Task<Hotel?>? GetHotelById(int? id);
     }
 }

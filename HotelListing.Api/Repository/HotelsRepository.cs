@@ -12,7 +12,7 @@ namespace HotelListing.Api.Repository
             _context = context;
         }
 
-        public Task<Hotel> GetHotelById(int id)
+        public Task<Hotel?> GetHotelById(int? id)
         {
             if (id == null)
                 return null;

@@ -1,0 +1,11 @@
+2025-07-19 09:52:57.197 +01:00 [INF] Now listening on: https://localhost:7219
+2025-07-19 09:52:57.262 +01:00 [INF] Now listening on: http://localhost:5011
+2025-07-19 09:52:57.433 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-19 09:52:57.435 +01:00 [INF] Hosting environment: Development
+2025-07-19 09:52:57.437 +01:00 [INF] Content root path: C:\Users\hp\source\repos\HotelListing.Api\HotelListing.Api
+2025-07-19 10:17:29.096 +01:00 [INF] Now listening on: https://localhost:7219
+2025-07-19 10:17:29.147 +01:00 [INF] Now listening on: http://localhost:5011
+2025-07-19 10:17:29.322 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-19 10:17:29.327 +01:00 [INF] Hosting environment: Development
+2025-07-19 10:17:29.329 +01:00 [INF] Content root path: C:\Users\hp\source\repos\HotelListing.Api\HotelListing.Api
+2025-07-19 10:18:03.476 +01:00 [INF] HTTP GET /api/Countries responded 200 in 3734.0969 ms

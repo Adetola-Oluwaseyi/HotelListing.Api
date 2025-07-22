@@ -1,0 +1,21 @@
+2025-07-22 08:29:44.346 +01:00 [INF] Now listening on: https://localhost:7219
+2025-07-22 08:29:44.397 +01:00 [INF] Now listening on: http://localhost:5011
+2025-07-22 08:29:44.541 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-22 08:29:44.543 +01:00 [INF] Hosting environment: Development
+2025-07-22 08:29:44.545 +01:00 [INF] Content root path: C:\Users\hp\source\repos\HotelListing.Api\HotelListing.Api
+2025-07-22 08:30:07.286 +01:00 [INF] HTTP POST /api/Auth/login responded 401 in 4032.6841 ms
+2025-07-22 08:30:19.967 +01:00 [INF] HTTP POST /api/Auth/login responded 401 in 98.6623 ms
+2025-07-22 08:30:35.453 +01:00 [ERR] HTTP POST /api/Auth/login responded 500 in 640.1705 ms
+2025-07-22 08:31:22.989 +01:00 [ERR] HTTP POST /api/Auth/login responded 500 in 226.6753 ms
+2025-07-22 08:32:37.440 +01:00 [ERR] HTTP POST /api/Auth/login responded 500 in 325.9331 ms
+2025-07-22 08:35:05.371 +01:00 [ERR] HTTP POST /api/Auth/login responded 500 in 280.2017 ms
+2025-07-22 08:36:04.067 +01:00 [ERR] HTTP POST /api/Auth/login responded 500 in 289.4250 ms
+2025-07-22 08:36:51.503 +01:00 [ERR] HTTP POST /api/Auth/login responded 500 in 268.0965 ms
+2025-07-22 11:13:47.865 +01:00 [INF] HTTP GET /api/Countries responded 200 in 665.4917 ms
+2025-07-22 11:14:33.825 +01:00 [INF] HTTP GET /api/Hotels responded 200 in 156.1419 ms
+2025-07-22 11:15:20.612 +01:00 [INF] Now listening on: https://localhost:7219
+2025-07-22 11:15:20.656 +01:00 [INF] Now listening on: http://localhost:5011
+2025-07-22 11:15:20.800 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-22 11:15:20.803 +01:00 [INF] Hosting environment: Development
+2025-07-22 11:15:20.805 +01:00 [INF] Content root path: C:\Users\hp\source\repos\HotelListing.Api\HotelListing.Api
+2025-07-22 11:15:28.084 +01:00 [INF] HTTP GET /api/Countries responded 401 in 14.5125 ms

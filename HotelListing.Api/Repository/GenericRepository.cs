@@ -18,9 +18,9 @@ namespace HotelListing.Api.Repository
             return await _context.Set<T>().ToListAsync();
         }
 
-        public async Task<T> GetByIdAsync(int? id)
+        public async Task<T?> GetByIdAsync(int? id)
         {
-            if (id == null)
+            if (id is null)
                 return null;
             return await _context.Set<T>().FindAsync(id);
         }

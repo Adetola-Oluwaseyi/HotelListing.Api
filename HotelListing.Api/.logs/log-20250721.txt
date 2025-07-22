@@ -1,0 +1,81 @@
+2025-07-21 22:13:58.982 +01:00 [INF] Now listening on: https://localhost:7219
+2025-07-21 22:13:59.029 +01:00 [INF] Now listening on: http://localhost:5011
+2025-07-21 22:13:59.179 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-21 22:13:59.182 +01:00 [INF] Hosting environment: Development
+2025-07-21 22:13:59.184 +01:00 [INF] Content root path: C:\Users\hp\source\repos\HotelListing.Api\HotelListing.Api
+2025-07-21 22:15:23.128 +01:00 [INF] HTTP POST /api/Auth/register responded 400 in 873.2706 ms
+2025-07-21 22:15:42.867 +01:00 [INF] HTTP POST /api/Auth/register responded 200 in 3780.6174 ms
+2025-07-21 22:16:22.098 +01:00 [ERR] HTTP POST /api/Auth/login responded 500 in 841.9888 ms
+System.ArgumentOutOfRangeException: IDX10653: The encryption algorithm 'HS256' requires a key size of at least '128' bits. Key '[PII of type 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]', is of size: '112'. (Parameter 'key')
+   at Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider..ctor(SecurityKey key, String algorithm, Boolean willCreateSignatures)
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateSignatureProvider(SecurityKey key, String algorithm, Boolean willCreateSignatures, Boolean cacheProvider)
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateForSigning(SecurityKey key, String algorithm, Boolean cacheProvider)
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateForSigning(SecurityKey key, String algorithm)
+   at Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities.CreateEncodedSignature(String input, SigningCredentials signingCredentials)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.WriteToken(SecurityToken token)
+   at HotelListing.Api.Repository.AuthManager.GenerateToken(ApiUser user) in C:\Users\hp\source\repos\HotelListing.Api\HotelListing.Api\Repository\AuthManager.cs:line 76
+   at HotelListing.Api.Repository.AuthManager.Login(LoginDto login) in C:\Users\hp\source\repos\HotelListing.Api\HotelListing.Api\Repository\AuthManager.cs:line 47
+   at HotelListing.Api.Controllers.AuthController.Login(LoginDto login) in C:\Users\hp\source\repos\HotelListing.Api\HotelListing.Api\Controllers\AuthController.cs:line 46
+   at lambda_method320(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2025-07-21 22:16:22.176 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentOutOfRangeException: IDX10653: The encryption algorithm 'HS256' requires a key size of at least '128' bits. Key '[PII of type 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]', is of size: '112'. (Parameter 'key')
+   at Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider..ctor(SecurityKey key, String algorithm, Boolean willCreateSignatures)
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateSignatureProvider(SecurityKey key, String algorithm, Boolean willCreateSignatures, Boolean cacheProvider)
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateForSigning(SecurityKey key, String algorithm, Boolean cacheProvider)
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateForSigning(SecurityKey key, String algorithm)
+   at Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities.CreateEncodedSignature(String input, SigningCredentials signingCredentials)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.WriteToken(SecurityToken token)
+   at HotelListing.Api.Repository.AuthManager.GenerateToken(ApiUser user) in C:\Users\hp\source\repos\HotelListing.Api\HotelListing.Api\Repository\AuthManager.cs:line 76
+   at HotelListing.Api.Repository.AuthManager.Login(LoginDto login) in C:\Users\hp\source\repos\HotelListing.Api\HotelListing.Api\Repository\AuthManager.cs:line 47
+   at HotelListing.Api.Controllers.AuthController.Login(LoginDto login) in C:\Users\hp\source\repos\HotelListing.Api\HotelListing.Api\Controllers\AuthController.cs:line 46
+   at lambda_method320(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-07-21 22:36:56.406 +01:00 [INF] HTTP POST /api/Auth/login responded 200 in 285.1886 ms
+2025-07-21 22:39:56.243 +01:00 [INF] HTTP POST /api/Auth/login responded 200 in 184.3409 ms
+2025-07-21 22:40:25.399 +01:00 [INF] HTTP POST /api/Auth/login responded 200 in 210.7800 ms
+2025-07-21 22:42:33.087 +01:00 [INF] Now listening on: https://localhost:7219
+2025-07-21 22:42:33.134 +01:00 [INF] Now listening on: http://localhost:5011
+2025-07-21 22:42:33.259 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-21 22:42:33.262 +01:00 [INF] Hosting environment: Development
+2025-07-21 22:42:33.263 +01:00 [INF] Content root path: C:\Users\hp\source\repos\HotelListing.Api\HotelListing.Api
+2025-07-21 22:42:58.651 +01:00 [INF] HTTP POST /api/Auth/login responded 401 in 4026.9188 ms
+2025-07-21 22:43:40.207 +01:00 [INF] HTTP POST /api/Auth/login responded 400 in 29.3622 ms
+2025-07-21 22:44:13.641 +01:00 [INF] HTTP POST /api/Auth/login responded 401 in 277.0994 ms
+2025-07-21 22:44:31.634 +01:00 [INF] HTTP POST /api/Auth/login responded 401 in 588.4420 ms
+2025-07-21 22:48:19.273 +01:00 [INF] HTTP POST /api/Auth/login responded 401 in 184.2888 ms
+2025-07-21 22:58:45.626 +01:00 [INF] Now listening on: https://localhost:7219
+2025-07-21 22:58:45.668 +01:00 [INF] Now listening on: http://localhost:5011
+2025-07-21 22:58:45.810 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-21 22:58:45.812 +01:00 [INF] Hosting environment: Development
+2025-07-21 22:58:45.814 +01:00 [INF] Content root path: C:\Users\hp\source\repos\HotelListing.Api\HotelListing.Api
+2025-07-21 22:59:04.954 +01:00 [INF] HTTP POST /api/Auth/login responded 401 in 3280.8565 ms
+2025-07-21 22:59:56.455 +01:00 [INF] HTTP POST /api/Auth/login responded 401 in 297.7065 ms
+2025-07-21 23:00:24.816 +01:00 [INF] HTTP POST /api/Auth/login responded 401 in 146.4612 ms
+2025-07-21 23:00:47.800 +01:00 [INF] HTTP POST /api/Auth/login responded 401 in 87.9583 ms
+2025-07-21 23:01:10.537 +01:00 [INF] HTTP POST /api/Auth/login responded 401 in 106.1611 ms
+2025-07-21 23:01:28.377 +01:00 [INF] HTTP POST /api/Auth/login responded 401 in 213.9015 ms
